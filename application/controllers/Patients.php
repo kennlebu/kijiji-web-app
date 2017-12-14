@@ -38,7 +38,7 @@ class Patients extends CI_Controller {
     * @return Response
    */
 
-   public function store()
+   public function save()
    {
        $this->load->database();
 

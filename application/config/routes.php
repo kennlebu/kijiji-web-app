@@ -54,7 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['patients'] = "patients/index";
-$route['createPatient']['post'] = "patients/new";
+$route['patientsCreate']['post'] = "patients/save";
 $route['editPatient/(:any)'] = "patients/edit/$1";
 $route['updatePatient/(:any)']['put'] = "patients/update/$1";
 $route['deletePatient/(:any)']['delete'] = "patients/delete/$1";
