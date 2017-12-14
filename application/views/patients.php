@@ -21,8 +21,10 @@
 
 	<thead>
 	    <tr>
-		      <th>Title</th>
-		      <th>Description</th>
+		      <th>Name</th>
+		      <th>Date of Birth</th>
+		      <th>Gender</th>
+		      <th>Service</th>
 		      <th width="200px">Action</th>
 	    </tr>
 	</thead>
@@ -43,7 +45,7 @@
       </div>
       <div class="modal-body">
 
-            <form data-toggle="validator" action="patients/store" method="POST">
+            <form data-toggle="validator" action="patients/save" method="POST">
                 <div class="form-group">
                     <label class="control-label" for="firstname">Firstname:</label>
                     <input type="text" name="firstname" class="form-control" data-error="Enter the patient's firstname." required />
@@ -56,19 +58,32 @@
                 </div>
                 
                 <div class="form-group">
-                    <label class="control-label" for="dob">Date of birth:</label>
-                    <input type="text" name="dob" class="form-control" data-error="Enter the date of birth" required placeholder="YYYY-MM-DD" />
+                    <label class="control-label" for="dateOfBirth">Date of birth:</label>
+                    <input type="text" name="dateOfBirth" class="form-control" data-error="Enter the date of birth" required placeholder="YYYY-MM-DD" />
                     <div class="help-block with-errors"></div>
                 </div>
-                
+                <br/>
                 <div class="form-group col-xs-6">
                 <label class="css-input css-radio css-radio-default push-10-r">
-                    <input type="radio" name="gender"><span></span> Male
+                    <input type="radio" name="gender_id" value="1"><span></span> Male
                 </label>
                 <label class="css-input css-radio css-radio-default">
-                    <input type="radio" name="gender"><span></span> Female
+                    <input type="radio" name="gender_id" value="2"><span></span> Female
                 </label>
             </div>
+            <br/>
+            <div class="form-group">
+            <label class="col-xs-12" for="example-select">Service</label>
+            <div class="col-sm-9">
+                <select class="form-control" id="service" name="service_id" size="1">
+                    <option value="0">Please select</option>
+                    <option value="1">ART</option>
+                    <option value="2">PREP</option>
+                    <option value="3">PEP</option>
+                    <option value="4">OI</option>
+                </select>
+            </div>
+        </div>
                 </div>
 
                 <!-- <div class="form-group">
@@ -132,6 +147,7 @@
 	var url = "patients";
 </script>
 
+<script src="/js/patient-ajax.js"></script> 
 
 </body>
 </html>
