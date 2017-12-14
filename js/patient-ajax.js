@@ -130,6 +130,17 @@ $(".crud-submit")
         var firstname = $("#create-patient")
             .find("input[name='firstname']")
             .val();
+        var lastname = $("#create-patient")
+            .find("input[name='firstname']")
+            .val();
+
+        var gender = $("#create-patient")
+            .find("input[name='firstname']")
+            .val();
+
+        var service = $("#create-patient")
+            .find("input[name='firstname']")
+            .val();
 
         var observation = $("#create-patient")
             .find("textarea[name='observation']")
@@ -145,8 +156,12 @@ $(".crud-submit")
                 url: form_action,
 
                 data: {
-                    title: title,
-                    description: description
+                    firstname: firstname,
+                    lastname: lastname,
+                    observation: observation,
+                    gender: gender,
+                    service: service
+
                 }
 
             })
