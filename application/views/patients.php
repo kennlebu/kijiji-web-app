@@ -86,11 +86,11 @@
         </div>
                 </div>
 
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label class="control-label" for="observation">Observations:</label>
                     <textarea name="observation" class="form-control" data-error="Please enter observations." required></textarea>
                     <div class="help-block with-errors"></div>
-                </div> -->
+                </div>
                 <div class="form-group">
                     <button type="submit" class="btn crud-submit btn-success">Submit</button>
                 </div>
