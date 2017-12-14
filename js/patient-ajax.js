@@ -1,5 +1,4 @@
 var page = 1;
-
 var current_page = 1;
 
 var total_page = 0;
@@ -92,11 +91,15 @@ function manageRow(data) {
 
         rows = rows + '<tr>';
 
-        rows = rows + '<td>' + value.title + '</td>';
+        rows = rows + '<td>' + value.firstname + " " + value.lastname + '</td>';
 
-        rows = rows + '<td>' + value.description + '</td>';
+        rows = rows + '<td>' + value.dateOfBirth + '</td>';
 
-        rows = rows + '<td data-id="' + value.id + '">';
+        rows = rows + '<td data-id="' + value.gender + '">';
+
+        rows = rows + '<td data-id="' + value.observation + '">';
+
+        rows = rows + '<td data-id="' + value.observation + '">';
 
         rows = rows + '<button data-toggle="modal" data-target="#edit-patient" class="btn btn-primary e' +
                 'dit-patient">Edit</button> ';
@@ -124,12 +127,12 @@ $(".crud-submit")
             .find("form")
             .attr("action");
 
-        var title = $("#create-patient")
-            .find("input[name='title']")
+        var firstname = $("#create-patient")
+            .find("input[name='firstname']")
             .val();
 
-        var description = $("#create-patient")
-            .find("textarea[name='description']")
+        var observation = $("#create-patient")
+            .find("textarea[name='observation']")
             .val();
 
         $
